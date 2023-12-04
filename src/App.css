@@ -39,6 +39,8 @@
 nav {
   display: flex;
   justify-content: space-evenly;
+  background-color: beige;
+  padding: 20px;
 }
 nav a{
   color: #751515;

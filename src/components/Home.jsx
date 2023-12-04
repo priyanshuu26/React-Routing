@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
-  const NavigateTo = () => {
+
+  const navigateTo = () => {
     const name = 'priyanshu';
     if (name === 'priyanshu') {
       navigate('/contact');
@@ -14,7 +15,7 @@ function Home() {
   return (
     <div>
       <h1>this is my Home Page</h1>
-      <button type="button" onClick={() => NavigateTo()}>
+      <button type="button" onClick={navigateTo}>
         contact
       </button>
     </div>

@@ -22,6 +22,7 @@ function App() {
           <Route path="/product" element={<Product />}>
             <Route path="jeans" element={<Jeans />} />
             <Route path="shirts" element={<Shirt />} />
+            <Route index element={<Shirt />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

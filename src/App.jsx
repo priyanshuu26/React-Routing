@@ -9,6 +9,8 @@ import PageNotFound from './components/PageNotFound';
 import Product from './components/Product';
 import Jeans from './components/Jeans';
 import Shirt from './components/Shirt';
+import ShirtPattern from './components/ShirtPattern';
+import ShirtDesign from './components/ShirtDesign';
 
 function App() {
   return (
@@ -21,7 +23,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/product" element={<Product />}>
             <Route path="jeans" element={<Jeans />} />
-            <Route path="shirts" element={<Shirt />} />
+            <Route path="shirts" element={<Shirt />}>
+              <Route path="pattern" element={<ShirtPattern />}>
+                <Route path="design" element={<ShirtDesign />} />
+              </Route>
+            </Route>
             <Route index element={<Shirt />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
